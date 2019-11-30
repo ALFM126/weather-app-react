@@ -10,7 +10,10 @@ function App() {
       </div>
       <p>
         <small>
-          <a href="/">Open Source Code</a> by ALFM126
+          <a href="https://github.com/ALFM126/weather-app-react">
+            Open Source Code
+          </a>{" "}
+          by ALFM126
         </small>
       </p>
     </div>
