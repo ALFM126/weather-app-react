@@ -1,0 +1,46 @@
+.Weather {
+  background-image: linear-gradient(to right, #007adf 0%, #00ecbc 100%);
+  color: #ffffff;
+  max-width: 500px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px 3px #6b6e6d;
+}
+.Weather form {
+  text-align: left;
+}
+
+.Weather input {
+  border-radius: 5px;
+  border: solid 1px #9ea1a0;
+  margin: 10px 10px 0px 0px;
+}
+
+.Weather input submit {
+  border-radius: 15px;
+  border: solid 1px #9ea1a0;
+  margin: 10px 10px 0px 0px;
+  padding: 2px 7px;
+  color: #ffffff;
+  background-color: #9ea1a0;
+}
+
+.Weather p {
+  margin: 5px;
+}
+
+.Weather h1 {
+  text-align: center;
+  font-size: 25px;
+  margin: 10px;
+}
+
+.Weather img {
+  margin: 5px 0;
+}
+
+.Weather ul {
+  margin: 5px 0;
+  list-style: none;
+}
