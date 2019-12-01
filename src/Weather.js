@@ -6,6 +6,8 @@ import Time from "./Time";
 export default function Weather() {
   const [ready, setReady] = useState(false);
   const [data, setData] = useState({});
+  const [city, setCity] = useState(data.city);
+
   function handleResponse(response) {
     setData({
       time: new Date(response.data.dt * 1000),
@@ -20,17 +22,33 @@ export default function Weather() {
     setReady(true);
   }
 
+  function search() {
+    const apiKey = "8c52e04f20e2246bd2fa1beb9972163c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCity(event) {
+    setCity(event.target.value);
+  }
+
   if (ready) {
     return (
       <div className="Weather">
         <div className="row">
           <div className="col-sm-7">
-            <form>
+            <form onSubmit={handleSubmit}>
               <input
                 type="search"
                 placeholder="Enter City..."
                 autoComplete="off"
                 autoFocus="on"
+                onChange={handleCity}
               ></input>
               <input type="submit" value="Search"></input>
             </form>
@@ -73,7 +91,6 @@ export default function Weather() {
     let city = "Braga";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-
     return "Loading...";
   }
 }
