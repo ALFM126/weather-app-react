@@ -28,7 +28,7 @@ export default function Weather() {
               <input
                 type="search"
                 placeholder="Enter City..."
-                autocomplete="off"
+                autoComplete="off"
                 autoFocus="on"
               ></input>
               <input type="submit" value="Search"></input>
