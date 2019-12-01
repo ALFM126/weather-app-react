@@ -37,14 +37,7 @@
 }
 
 .Weather .clearfix {
-  margin-left: 15px;
-}
-
-.Weather img {
-  height: 70px;
-  width: 70px;
-  margin-top: 5px;
-  margin-right: 10px;
+  margin-left: 5px;
 }
 
 .Weather ul {

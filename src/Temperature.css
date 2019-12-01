@@ -1,5 +1,5 @@
 .Temperature .temperature {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 70px;
   margin-top: 5px;
 }
@@ -9,4 +9,8 @@
   position: relative;
   top: -40px;
   margin-left: 5px;
+}
+
+.Temperature a {
+  color: #111111;
 }

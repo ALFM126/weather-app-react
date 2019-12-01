@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import Time from "./Time";
+import Icon from "./Icon";
 import Temperature from "./Temperature";
 
 export default function Weather() {
@@ -14,7 +15,7 @@ export default function Weather() {
       time: new Date(response.data.dt * 1000),
       city: response.data.name,
       temperature: response.data.main.temp,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/rain.png",
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity
@@ -62,19 +63,19 @@ export default function Weather() {
           <Time date={data.time} />
         </p>
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-sm-7">
             <div className="clearfix">
-              <img
-                src={data.iconUrl}
-                alt={data.description}
-                className="float-left"
-              ></img>
-              <div className="float-left">
-                <Temperature celsius={data.temperature} />
+              <div className="row">
+                <div className="col-sm-6">
+                  <Icon symbol={data.icon} />
+                </div>
+                <div className="col-sm-6">
+                  <Temperature celsius={data.temperature} />
+                </div>
               </div>
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-5">
             <ul>
               <li className="text-capitalize">{data.description}</li>
               <li>Humidity: {data.humidity}%</li>
