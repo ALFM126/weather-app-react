@@ -2,7 +2,7 @@
   background-image: linear-gradient(to right, #007adf 0%, #00ecbc 100%);
   color: #ffffff;
   max-width: 500px;
-  margin: 10px;
+  margin: 10px auto;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 5px 5px 10px 3px #6b6e6d;
@@ -37,7 +37,22 @@
 }
 
 .Weather img {
-  margin: 5px 0;
+  height: 70px;
+  width: 70px;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+.Weather span {
+  font-size: 70px;
+  line-height: 70px;
+  margin-top: 5px;
+}
+
+.Weather a {
+  position: relative;
+  top: -40px;
+  margin-left: 5px;
 }
 
 .Weather ul {

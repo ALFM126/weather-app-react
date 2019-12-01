@@ -8,14 +8,14 @@ function App() {
       <div className="container">
         <Weather />
       </div>
-      <p>
+      <footer>
         <small>
+          This project was coded by ALFM126 and is{" "}
           <a href="https://github.com/ALFM126/weather-app-react">
-            Open Source Code
-          </a>{" "}
-          by ALFM126
+            open-sourced
+          </a>
         </small>
-      </p>
+      </footer>
     </div>
   );
 }

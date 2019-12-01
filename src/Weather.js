@@ -11,6 +11,7 @@ export default function Weather() {
               type="search"
               placeholder="Enter City..."
               autocomplete="off"
+              autoFocus="on"
             ></input>
             <input type="submit" value="Search"></input>
           </form>
@@ -23,11 +24,17 @@ export default function Weather() {
       <p>22:00</p>
       <div className="row">
         <div className="col-sm-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/rain.png"
-            alt="description"
-          ></img>{" "}
-          6<a href="/">ºC</a>
+          <div className="clearfix">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/rain.png"
+              alt="description"
+              className="float-left"
+            ></img>
+            <div className="float-left">
+              <span>6</span>
+              <a href="/">ºC</a>
+            </div>
+          </div>
         </div>
         <div className="col-sm-6">
           <ul>
