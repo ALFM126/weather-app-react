@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import Time from "./Time";
+import Temperature from "./Temperature";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
@@ -69,10 +70,7 @@ export default function Weather() {
                 className="float-left"
               ></img>
               <div className="float-left">
-                <span className="temperature">
-                  {Math.round(data.temperature)}
-                </span>
-                <a href="/">ºC</a>
+                <Temperature celsius={data.temperature} />
               </div>
             </div>
           </div>
