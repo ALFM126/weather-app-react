@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import Time from "./Time";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
   const [data, setData] = useState({});
   function handleResponse(response) {
     setData({
-      time: "Sunday, December 1, 2019",
+      time: new Date(response.data.dt * 1000),
       city: response.data.name,
       temperature: response.data.main.temp,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/rain.png",
@@ -38,7 +39,9 @@ export default function Weather() {
             <h1>{data.city}</h1>
           </div>
         </div>
-        <p>{data.time}</p>
+        <p>
+          <Time date={data.time} />
+        </p>
         <div className="row">
           <div className="col-sm-6">
             <div className="clearfix">
