@@ -1,0 +1,10 @@
+.Forecast canvas {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 45px;
+  height: 45px;
+}
+
+.Forecast .col {
+  text-align: center;
+}

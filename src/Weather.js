@@ -4,6 +4,7 @@ import axios from "axios";
 import Time from "./Time";
 import Icon from "./Icon";
 import Temperature from "./Temperature";
+import Forecast from "./Forecast";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
@@ -83,6 +84,7 @@ export default function Weather() {
             </ul>
           </div>
         </div>
+        <Forecast city={data.city} />
       </div>
     );
   } else {

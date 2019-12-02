@@ -44,3 +44,16 @@
   margin: 5px 0;
   list-style: none;
 }
+
+.Weather .col-sm-6 {
+  padding: 0px;
+  text-align: center;
+}
+
+.Weather .col-sm-7 {
+  padding-right: 0px;
+}
+
+.Weather canvas {
+  margin-top: 10px;
+}
